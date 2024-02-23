@@ -1,3 +1,7 @@
+## DATE:23/02/2024
+## NAME:MOTHY KRISHNAN R D
+## ROLL NO:212221080051
+## DEPARTMENT:MECHANICAL
  INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-
 
 
@@ -50,7 +54,7 @@ CIRCUIT DIAGRAM
 ![image](https://user-images.githubusercontent.com/36288975/163530788-eec3cdc3-95e8-4d2d-8349-6d0ea4c9439c.png)
 
 **FIGURE -01
-**
+
 
 **PROCEDURE:**
 
@@ -67,27 +71,51 @@ CIRCUIT DIAGRAM
 
 
 **PROGRAM** 
- 
+ ```
+int pot;
+int led=7;
+void setup()
+{
+  pinMode(led, OUTPUT);
+  Serial.begin(9600);
+}
 
-
-
-
-
-
-
-
+void loop()
+{
+  pot=analogRead(A0);
+  //Serial.print("Value=");
+  Serial.println(pot);
+  if(pot>900)
+  {  
+  // turn the LED on (HIGH is the voltage level)
+  digitalWrite(led, HIGH);
+  delay(500); // Wait for 1000 millisecond(s)
+  // turn the LED off by making the voltage LOW
+  digitalWrite(led, LOW);
+  delay(500);
+  }// Wait for 1000 millisecond(s)
+}
+```
 
 **
+## GRAPH
+![Screenshot 2024-02-23 161930](https://github.com/Mothykrishnan100/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/160512502/d6f11491-ba37-4e7b-92e5-887b7ce105ba)
+
 **Simulation output:** 
 **
 
 
-[My image](username.github.com/repository/img/image.jpg)
 
 
 
 
+## OFF CONDITION
+![Screenshot 2024-02-23 155328](https://github.com/Mothykrishnan100/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/160512502/93340d4b-a82f-4de7-808a-5cb8e81022d5)
+## ON CONDITION
+![Screenshot 2024-02-23 155310](https://github.com/Mothykrishnan100/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/160512502/00dff71f-b1cd-4bcc-bc81-4fe898c6d703)
 
 
+
+![Screenshot 2024-02-23 155912](https://github.com/Mothykrishnan100/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/160512502/786af1f0-306b-4e9a-b212-2c7cd436a918)
 
 **RESULT: ** Arduino uno analog input functioning is learned and interfaced with digital input switch .
